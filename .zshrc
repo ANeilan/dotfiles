@@ -12,6 +12,7 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_MODE="nerdfont-complete"
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 source $HOME/antigen.zsh
 
 # Load the oh-my-zsh's library.
