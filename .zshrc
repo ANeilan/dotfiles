@@ -48,3 +48,6 @@ export CFLAGS="-march=skylake -O2 -g"
 export CXXFLAGS="${CFLAGS}"
 alias mirror='wget -r -np -m -e robots=off'
 export PATH=/usr/lib64/ccache:$PATH
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
