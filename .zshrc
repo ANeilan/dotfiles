@@ -1,9 +1,16 @@
+export TERM="xterm-256color"
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir rbenv vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon time dir rbenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
+POWERLEVEL9K_TIME_FORMAT="%D{%I:%M %p}"
+POWERLEVEL9K_DISABLE_RPROMPT=true
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_MODE="nerdfont-complete"
 source $HOME/antigen.zsh
 
@@ -35,3 +42,9 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 # Tell Antigen that you're done.
 antigen apply
 
+export CC=gcc
+export CXX=g++
+export CFLAGS="-march=skylake -O2 -g"
+export CXXFLAGS="${CFLAGS}"
+alias mirror='wget -r -np -m -e robots=off'
+export PATH=/usr/lib64/ccache:$PATH
