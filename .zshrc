@@ -26,6 +26,7 @@ antigen bundle encode64
 antigen bundle fedora
 antigen bundle httpie
 antigen bundle extract
+antigen bundle cp
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
