@@ -23,6 +23,12 @@ antigen bundle extract
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# LukeChilds' zsh-nvm
+antigen bundle lukechilds/zsh-nvm
+
+# Tarrasch's zsh-optimized autoenv
+antigen bundle Tarrasch/zsh-autoenv
+
 # Load the theme.
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
