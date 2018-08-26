@@ -49,8 +49,6 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 # Tell Antigen that you're done.
 antigen apply
 
-export CC=gcc
-export CXX=g++
 export CFLAGS="-march=skylake -O2 -g"
 export CXXFLAGS="${CFLAGS}"
 alias mirror='wget -r -np -m -e robots=off'
@@ -64,4 +62,11 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
-
+load_clang() {
+	export CC=clang
+	export CXX=clang++
+}
+load_gcc() {
+	export CC=gcc
+	export CXX=g++
+}
