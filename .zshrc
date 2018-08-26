@@ -24,11 +24,15 @@ antigen bundle pip
 antigen bundle command-not-found
 antigen bundle zsh_reload
 antigen bundle encode64
-#antigen bundle fedora
-antigen bundle ubuntu
+if [ -e /etc/fedora-release ]; then
+    antigen bundle fedora
+elif [ -e /etc/ubuntu-release ]; then
+    antigen bundle ubuntu
+fi
 antigen bundle httpie
 antigen bundle extract
 antigen bundle cp
+antigen bundle go
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -51,7 +55,7 @@ export CFLAGS="-march=skylake -O2 -g"
 export CXXFLAGS="${CFLAGS}"
 alias mirror='wget -r -np -m -e robots=off'
 export PATH=/usr/lib64/ccache:$PATH
-
+export PATH=$HOME/go/bin:$PATH
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
