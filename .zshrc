@@ -26,7 +26,7 @@ antigen bundle zsh_reload
 antigen bundle encode64
 if [ -e /etc/fedora-release ]; then
     antigen bundle fedora
-elif [ -e /etc/ubuntu-release ]; then
+elif grep -q ubuntu "/etc/os-release"; then
     antigen bundle ubuntu
 fi
 antigen bundle httpie
