@@ -54,6 +54,8 @@ export CXXFLAGS="${CFLAGS}"
 alias mirror='wget -r -np -m -e robots=off'
 export PATH=/usr/lib64/ccache:$PATH
 export PATH=$HOME/go/bin:$PATH
+# added by Anaconda3 installer
+export PATH="/home/aneilan/anaconda3/bin:$PATH"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
