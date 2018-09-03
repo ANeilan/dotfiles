@@ -49,7 +49,7 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 # Tell Antigen that you're done.
 antigen apply
 
-export CFLAGS="-march=skylake -O2 -g"
+export CFLAGS="-march=skylake -O2 -g -fdiagnostics-color"
 export CXXFLAGS="${CFLAGS}"
 alias mirror='wget -r -np -m -e robots=off'
 export PATH=/usr/lib64/ccache:$PATH
