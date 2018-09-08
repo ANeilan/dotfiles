@@ -51,7 +51,7 @@ antigen apply
 
 export CFLAGS="-march=skylake -O2 -g -fdiagnostics-color"
 export CXXFLAGS="${CFLAGS}"
-alias mirror='wget -r -np -m -e robots=off'
+alias mirror='wget -r -np -m -e robots=off --timeout=1 --tries=5 --retry-connrefused'
 export PATH=/usr/lib64/ccache:$PATH
 export PATH=$HOME/go/bin:$PATH
 # added by Anaconda3 installer
