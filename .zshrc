@@ -54,6 +54,7 @@ export CXXFLAGS="${CFLAGS}"
 alias mirror='wget -r -np -m -e robots=off --timeout=1 --tries=3 --retry-connrefused'
 export PATH=/usr/lib64/ccache:$PATH
 export PATH=$HOME/go/bin:$PATH
+export PATH=$HOME/Android_SDK/platform-tools:$HOME/Android_SDK/build-tools/28.0.3:$HOME/Android_SDK/tools:$HOME/Android_SDK/ndk-bundle:$PATH
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
