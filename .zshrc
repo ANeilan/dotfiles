@@ -1,10 +1,10 @@
 export TERM="xterm-256color" 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rvm vcs) 
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rvm node_version vcs) 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
-#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
-#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
 POWERLEVEL9K_TIME_FORMAT="%D{%I:%M %p}"
 POWERLEVEL9K_DISABLE_RPROMPT=true
@@ -24,11 +24,13 @@ antigen bundle pip
 antigen bundle command-not-found
 antigen bundle zsh_reload
 antigen bundle encode64
-if [ -e /etc/fedora-release ]; then
-    antigen bundle fedora
-elif grep -q ubuntu "/etc/os-release"; then
-    antigen bundle ubuntu
-fi
+antigen bundle debian
+antigen bundle fuck
+#if [ -e /etc/fedora-release ]; then
+#    antigen bundle fedora
+#elif grep -q ubuntu "/etc/os-release"; then
+#    antigen bundle ubuntu
+#fi
 antigen bundle httpie
 antigen bundle extract
 antigen bundle cp
