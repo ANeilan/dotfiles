@@ -24,13 +24,8 @@ antigen bundle pip
 antigen bundle command-not-found
 antigen bundle zsh_reload
 antigen bundle encode64
-antigen bundle debian
 antigen bundle fuck
-#if [ -e /etc/fedora-release ]; then
-#    antigen bundle fedora
-#elif grep -q ubuntu "/etc/os-release"; then
-#    antigen bundle ubuntu
-#fi
+antigen bundle fedora
 antigen bundle httpie
 antigen bundle extract
 antigen bundle cp
