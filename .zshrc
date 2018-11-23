@@ -1,53 +1,19 @@
-export TERM="xterm-256color"
-#POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rvm vcs)
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
-#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
-#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-#POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
-#POWERLEVEL9K_TIME_FORMAT="%D{%I:%M %p}"
-#POWERLEVEL9K_DISABLE_RPROMPT=true
-#POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-#POWERLEVEL9K_SHORTEN_DELIMITER=""
-#POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-#POWERLEVEL9K_MODE="nerdfont-complete"
-export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
-source $HOME/antigen.zsh
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZSH="/home/aneilan/.oh-my-zsh"
+ZSH_THEME="sorin"
+# DISABLE_AUTO_TITLE="true"
+# ENABLE_CORRECTION="true"
+# COMPLETION_WAITING_DOTS="true"
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+HIST_STAMPS="yyyy-mm-dd"
+plugins=(git pip command-not-found zsh_reload encode64 fuck fedora httpie extract cp go)
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle pip
-antigen bundle command-not-found
-antigen bundle zsh_reload
-antigen bundle encode64
-antigen bundle fuck
-antigen bundle fedora
-antigen bundle httpie
-antigen bundle extract
-antigen bundle cp
-antigen bundle go
-
-# Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-# LukeChilds' zsh-nvm
-antigen bundle lukechilds/zsh-nvm
-
-# Tarrasch's zsh-optimized autoenv
-antigen bundle Tarrasch/zsh-autoenv
-
-# Load the theme.
-#antigen theme bhilburn/powerlevel9k powerlevel9k
-#antigen theme apple
-antigen theme xiong-chiamiov-plus
-
-# Tell Antigen that you're done.
-antigen apply
-
+# User configuration
+export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export LANG=en_US.UTF-8
 export CFLAGS="-march=skylake -O2 -g -fdiagnostics-color"
 export CXXFLAGS="${CFLAGS}"
 alias mirror='wget -r -np -m -e robots=off --timeout=1 --tries=3 --retry-connrefused'
@@ -70,3 +36,4 @@ load_gcc() {
 	export CC=gcc
 	export CXX=g++
 }
+
