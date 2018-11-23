@@ -1,17 +1,17 @@
 export TERM="xterm-256color"
-POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rvm vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
-POWERLEVEL9K_TIME_FORMAT="%D{%I:%M %p}"
-POWERLEVEL9K_DISABLE_RPROMPT=true
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_SHORTEN_DELIMITER=""
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-POWERLEVEL9K_MODE="nerdfont-complete"
+#POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rvm vcs)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
+#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+#POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
+#POWERLEVEL9K_TIME_FORMAT="%D{%I:%M %p}"
+#POWERLEVEL9K_DISABLE_RPROMPT=true
+#POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+#POWERLEVEL9K_SHORTEN_DELIMITER=""
+#POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+#POWERLEVEL9K_MODE="nerdfont-complete"
 export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 source $HOME/antigen.zsh
 
@@ -41,7 +41,9 @@ antigen bundle lukechilds/zsh-nvm
 antigen bundle Tarrasch/zsh-autoenv
 
 # Load the theme.
-antigen theme bhilburn/powerlevel9k powerlevel9k
+#antigen theme bhilburn/powerlevel9k powerlevel9k
+#antigen theme apple
+antigen theme xiong-chiamiov-plus
 
 # Tell Antigen that you're done.
 antigen apply
