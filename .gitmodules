@@ -4,10 +4,3 @@
 [submodule ".config/base16-gnome-terminal"]
 	path = .config/base16-gnome-terminal
 	url = https://github.com/aaron-williamson/base16-gnome-terminal
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh
-[submodule "nvm"]
-	path = .nvm
-	url = https://github.com/creationix/nvm.git
-	branch = master
