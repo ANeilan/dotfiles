@@ -25,8 +25,8 @@ antigen bundle command-not-found
 antigen bundle zsh_reload
 antigen bundle encode64
 antigen bundle fuck
-#antigen bundle fedora
-antigen bundle ubuntu
+antigen bundle fedora
+#antigen bundle ubuntu
 antigen bundle httpie
 antigen bundle extract
 antigen bundle cp
