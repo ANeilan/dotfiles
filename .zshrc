@@ -1,6 +1,6 @@
 export TERM="xterm-256color"
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rvm vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
@@ -25,8 +25,9 @@ antigen bundle command-not-found
 antigen bundle zsh_reload
 antigen bundle encode64
 antigen bundle fuck
-antigen bundle fedora
+#antigen bundle fedora
 #antigen bundle ubuntu
+antigen bundle debian
 antigen bundle httpie
 antigen bundle extract
 antigen bundle cp
@@ -53,8 +54,6 @@ alias mirror='wget -r -np -m -e robots=off --timeout=1 --tries=3 --retry-connref
 export PATH=/usr/lib64/ccache:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=$HOME/Android_SDK/platform-tools:$HOME/Android_SDK/build-tools/28.0.3:$HOME/Android_SDK/tools:$HOME/Android_SDK/ndk-bundle:$PATH
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
